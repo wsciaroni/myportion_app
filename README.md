@@ -2,6 +2,13 @@
 
 A new Flutter project.
 
+## Working With GitHub
+
+1. [**Signed Commits are Required**](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account)
+2. **No Commits directly to Master**
+3. **Two Reviews Required per Pull Request**
+4. **Happy Commiting :)**
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
