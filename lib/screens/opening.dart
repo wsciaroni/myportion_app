@@ -70,6 +70,7 @@ class OpeningScreen extends StatelessWidget {
     );
 
     return Scaffold(
+      backgroundColor: Colors.blue,
       body: Padding(
         padding: EdgeInsets.all(36.0),
         child: Column(
@@ -83,6 +84,7 @@ class OpeningScreen extends StatelessWidget {
               "MyPortion App",
               style: TextStyle(
                 fontSize: 40,
+                color: Colors.white,
               ),
             ),
             buttons,
