@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myportion_app/theme/routes.dart';
 
 class OpeningScreen extends StatelessWidget {
   @override
@@ -28,6 +29,7 @@ class OpeningScreen extends StatelessWidget {
         ),
         onPressed: () {
           print("Login Pressed");
+          Navigator.of(context).pushNamed(AppRoutes.authLogin);
         },
       ),
     );
@@ -50,6 +52,7 @@ class OpeningScreen extends StatelessWidget {
         ),
         onPressed: () {
           print("Register Pressed");
+          Navigator.of(context).pushNamed(AppRoutes.authRegister);
         },
       ),
     );
