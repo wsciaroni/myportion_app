@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:myportion_app/theme/routes.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -28,6 +29,7 @@ class _LoginState extends State<Login> {
       style: TextStyle(
         color: Colors.white,
       ),
+      cursorColor: Colors.white,
       decoration: InputDecoration(
         hintText: "example@gmail.com",
         labelText: "Email",
@@ -37,7 +39,11 @@ class _LoginState extends State<Login> {
         labelStyle: TextStyle(
           color: Colors.white,
         ),
-        // TODO: Have bar not be blue like the app
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.white,
+          ),
+        ),
       ),
     );
 
@@ -53,12 +59,17 @@ class _LoginState extends State<Login> {
           style: TextStyle(
             color: Colors.white,
           ),
+          cursorColor: Colors.white,
           decoration: InputDecoration(
             labelText: "Password",
             labelStyle: TextStyle(
               color: Colors.white,
             ),
-            // TODO: Have bar not be blue like the app
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(
+                color: Colors.white,
+              ),
+            ),
           ),
         ),
         Padding(
@@ -144,7 +155,9 @@ class _LoginState extends State<Login> {
                       decoration: TextDecoration.underline,
                     ),
               ),
-              onPressed: null,
+              onPressed: () {
+                Navigator.of(context).pushNamed(AppRoutes.authRegister);
+              },
             ),
           ],
         )
