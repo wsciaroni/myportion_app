@@ -138,6 +138,7 @@ class _LoginScreen extends State<LoginScreen> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       side: BorderSide(color: Color(Constants.COLOR_PRIMARY))),
+                  key: Key('LoginButton'),
                 ),
               ),
             ),

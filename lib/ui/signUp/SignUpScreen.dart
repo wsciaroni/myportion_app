@@ -165,6 +165,7 @@ class _SignUpState extends State<SignUpScreen> {
                 padding:
                     const EdgeInsets.only(top: 16.0, right: 8.0, left: 8.0),
                 child: TextFormField(
+                    key: Key('FirstName'),
                     validator: validateName,
                     onSaved: (String val) {
                       firstName = val;
@@ -190,6 +191,7 @@ class _SignUpState extends State<SignUpScreen> {
                 padding:
                     const EdgeInsets.only(top: 16.0, right: 8.0, left: 8.0),
                 child: TextFormField(
+                    key: Key('LastName'),
                     validator: validateName,
                     onSaved: (String val) {
                       lastName = val;
@@ -215,6 +217,7 @@ class _SignUpState extends State<SignUpScreen> {
                 padding:
                     const EdgeInsets.only(top: 16.0, right: 8.0, left: 8.0),
                 child: TextFormField(
+                    key: Key('PhoneNumber'),
                     keyboardType: TextInputType.phone,
                     textInputAction: TextInputAction.next,
                     onFieldSubmitted: (_) => FocusScope.of(context).nextFocus(),
@@ -241,6 +244,7 @@ class _SignUpState extends State<SignUpScreen> {
                 padding:
                     const EdgeInsets.only(top: 16.0, right: 8.0, left: 8.0),
                 child: TextFormField(
+                    key: Key('EmailAddress'),
                     keyboardType: TextInputType.emailAddress,
                     textInputAction: TextInputAction.next,
                     onFieldSubmitted: (_) => FocusScope.of(context).nextFocus(),
@@ -266,6 +270,7 @@ class _SignUpState extends State<SignUpScreen> {
             child: Padding(
               padding: const EdgeInsets.only(top: 16.0, right: 8.0, left: 8.0),
               child: TextFormField(
+                  key: Key('Password'),
                   obscureText: true,
                   textInputAction: TextInputAction.next,
                   onFieldSubmitted: (_) => FocusScope.of(context).nextFocus(),
@@ -295,6 +300,7 @@ class _SignUpState extends State<SignUpScreen> {
           child: Padding(
             padding: const EdgeInsets.only(top: 16.0, right: 8.0, left: 8.0),
             child: TextFormField(
+                key: Key('PasswordRE'),
                 textInputAction: TextInputAction.done,
                 onFieldSubmitted: (_) {
                   _sendToServer();
@@ -338,6 +344,7 @@ class _SignUpState extends State<SignUpScreen> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                   side: BorderSide(color: Color(Constants.COLOR_PRIMARY))),
+              key: Key('SignUpButton'),
             ),
           ),
         ),

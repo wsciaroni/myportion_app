@@ -28,8 +28,8 @@ String validateMobile(String value) {
 }
 
 String validatePassword(String value) {
-  if (value.length < 6)
-    return 'Password must be more than 5 charaters';
+  if (value.length < 11)
+    return 'Password must be more than 10 characters';
   else
     return null;
 }
@@ -95,13 +95,13 @@ showAlertDialog(BuildContext context, String title, String content) {
     },
   );
   AlertDialog alert = AlertDialog(
+    key: Key('AlertDialog'),
     title: Text(title),
     content: Text(content),
     actions: [
       okButton,
     ],
   );
-
   // show the dialog
   showDialog(
     context: context,
@@ -124,7 +124,7 @@ push(BuildContext context, Widget destination) {
 pushAndRemoveUntil(BuildContext context, Widget destination, bool predict) {
   Navigator.of(context).pushAndRemoveUntil(
       MaterialPageRoute(builder: (context) => destination),
-          (Route<dynamic> route) => predict);
+      (Route<dynamic> route) => predict);
 }
 
 Widget displayCircleImage(String picUrl, double size, hasBorder) =>

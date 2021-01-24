@@ -10,15 +10,15 @@ import '../auth/AuthScreen.dart';
 final _currentPageNotifier = ValueNotifier<int>(0);
 
 final List<String> _titlesList = [
-  'Flutter Onboarding',
-  'Firebase Auth',
-  'Facebook Login'
+  'MyPortion Onboarding',
+  'Portioning Done Right',
+  'Use An Account'
 ];
 
 final List<String> _subtitlesList = [
-  'Build your onboarding flow in seconds.',
-  'Use Firebase for user managements.',
-  'Leaverage Facebook to log in user easily.'
+  'Welcome to MyPoriton App.',
+  'Make sure your pets are safe and healthy.',
+  'Leaverage accounts to log in easily.'
 ];
 
 final List<IconData> _imageList = [
@@ -129,6 +129,7 @@ Widget getLastPage(BuildContext context) {
                     ),
                     borderSide: BorderSide(color: Colors.white),
                     shape: StadiumBorder(),
+                    key: Key('NavToOnBoardButton'),
                   ))
             ],
           ),
@@ -150,6 +151,7 @@ class OnBoardingScreen extends StatelessWidget {
         body: Stack(
       children: <Widget>[
         PageView(
+          key: Key('InitialPageView'),
           children: populatePages(context),
           onPageChanged: (int index) {
             _currentPageNotifier.value = index;

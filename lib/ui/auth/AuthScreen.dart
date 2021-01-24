@@ -25,7 +25,7 @@ class AuthScreen extends StatelessWidget {
               ),
             ),
             Text(
-              'Say Hello To Your New App!',
+              'Say Hello To MyPortion Control!',
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Color(Constants.COLOR_PRIMARY),
@@ -35,7 +35,7 @@ class AuthScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Text(
-                'You\'ve just saved a week of development and headaches.',
+                'Welcome to Portion Control done right!',
                 style: TextStyle(fontSize: 18),
                 textAlign: TextAlign.center,
               ),
@@ -59,6 +59,7 @@ class AuthScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       side: BorderSide(color: Color(Constants.COLOR_PRIMARY))),
+                  key: Key('NavToLoginButton'),
                 ),
               ),
             ),
@@ -79,6 +80,7 @@ class AuthScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25.0),
                       side: BorderSide(color: Colors.black54)),
+                  key: Key('NavToSignUpButton'),
                 ),
               ),
             )
