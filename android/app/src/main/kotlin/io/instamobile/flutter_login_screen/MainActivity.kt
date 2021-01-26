@@ -1,4 +1,4 @@
-package io.instamobile.myportion_app
+package com.example.myportion_app
 
 import androidx.annotation.NonNull
 import io.flutter.embedding.android.FlutterActivity
