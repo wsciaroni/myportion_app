@@ -28,8 +28,11 @@ jobs:
 
       - name: Build docs
         run: dartdoc
-
-      - run:
-          name: Deploy to GitHub Pages
-          command: gh-pages --dist docs/api/
-          
+        
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./doc/api
+        
+        
