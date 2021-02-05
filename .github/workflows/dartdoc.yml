@@ -1,8 +1,11 @@
 name: Build and Deploy Docs
 
 on:
-  push:
+  workflow_run:
+    workflows: [ "Build, Format, Test" ]
     branches: [ main ]
+    types:
+      - completed
 
 jobs:
   build:
